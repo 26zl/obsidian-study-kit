@@ -1,0 +1,25 @@
+filters:
+  and:
+    - 'note.type == "repo"'
+    - not:
+        - 'file.inFolder("templates")'
+
+properties:
+  note.course:
+    displayName: "Course"
+  note.branch:
+    displayName: "Branch"
+  note.url:
+    displayName: "GitHub"
+
+views:
+  - type: table
+    name: "Linked"
+    order:
+      - file.name
+      - course
+      - branch
+      - url
+    sort:
+      - property: file.name
+        direction: ASC

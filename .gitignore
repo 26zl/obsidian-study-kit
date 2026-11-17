@@ -1,0 +1,55 @@
+# Obsidian state that differs per device
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+.obsidian/core-plugins-migration.json
+.obsidian/appearance.json
+.trash/
+
+# Third-party code is installed per device, never committed
+.obsidian/plugins/
+.obsidian/community-plugins.json
+.obsidian/themes/
+.obsidian/snippets/
+
+# Sensitive files
+private/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+
+# Course material you rarely have the right to redistribute.
+# Delete these lines if your repository is private and you want Git to hold your sources.
+courses/**/sources/**/*.pdf
+courses/**/sources/**/*.ppt
+courses/**/sources/**/*.pptx
+courses/**/sources/**/*.doc
+courses/**/sources/**/*.docx
+courses/**/sources/**/*.xls
+courses/**/sources/**/*.xlsx
+courses/**/sources/**/*.epub
+courses/**/sources/**/*.zip
+courses/**/sources/**/*.mp3
+courses/**/sources/**/*.m4a
+courses/**/sources/**/*.mp4
+courses/**/sources/**/*.mov
+
+# Agent settings and notes that belong to one machine
+.claude/settings.local.json
+CLAUDE.local.md
+AGENTS.local.md
+.agents/
+
+# Test output
+.dev/evals/results/
+
+# Operating system and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+*.tmp

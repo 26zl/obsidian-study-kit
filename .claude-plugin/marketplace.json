@@ -1,0 +1,14 @@
+{
+  "name": "obsidian-study-kit",
+  "description": "Study skills for students who keep their notes in Obsidian.",
+  "owner": {
+    "name": "obsidian-study-kit contributors"
+  },
+  "plugins": [
+    {
+      "name": "study-kit",
+      "source": "./",
+      "description": "Study skills for an Obsidian vault: Socratic tutor, exam trainer, spaced recall, concept maps, study planning, integrity-first assignment coaching, and GitHub repos linked in and synced."
+    }
+  ]
+}

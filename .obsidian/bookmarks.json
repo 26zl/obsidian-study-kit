@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "ctime": 1794873600000,
+      "path": "home.md",
+      "title": "Home"
+    },
+    {
+      "type": "file",
+      "ctime": 1794873600001,
+      "path": "profile.md",
+      "title": "Profile"
+    },
+    {
+      "type": "folder",
+      "ctime": 1794873600002,
+      "path": "inbox",
+      "title": "Inbox"
+    },
+    {
+      "type": "search",
+      "ctime": 1794873600003,
+      "query": "[origin:ai-draft] [checked:false]",
+      "title": "AI drafts to check"
+    }
+  ]
+}

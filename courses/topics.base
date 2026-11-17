@@ -1,0 +1,66 @@
+filters:
+  and:
+    - 'note.type == "topic"'
+    - not:
+        - 'file.inFolder("templates")'
+
+formulas:
+  days_until: 'if(next_review, (date(next_review) - today()).days, "")'
+
+properties:
+  note.course:
+    displayName: "Course"
+  note.last_score:
+    displayName: "Last score"
+  note.last_review:
+    displayName: "Last review"
+  note.next_review:
+    displayName: "Next review"
+  note.reviews:
+    displayName: "Reviews"
+  formula.days_until:
+    displayName: "Due in (days)"
+
+views:
+  - type: table
+    name: "Due"
+    filters:
+      and:
+        - 'if(next_review, date(next_review) <= today(), true)'
+    order:
+      - file.name
+      - course
+      - last_score
+      - next_review
+      - reviews
+    sort:
+      - property: next_review
+        direction: ASC
+  - type: table
+    name: "All"
+    groupBy:
+      property: course
+      direction: ASC
+    order:
+      - file.name
+      - last_score
+      - last_review
+      - next_review
+      - formula.days_until
+      - reviews
+    sort:
+      - property: next_review
+        direction: ASC
+  - type: table
+    name: "This course"
+    filters:
+      and:
+        - 'file.inFolder(this.file.folder)'
+    order:
+      - file.name
+      - last_score
+      - next_review
+      - reviews
+    sort:
+      - property: next_review
+        direction: ASC

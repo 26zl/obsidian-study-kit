@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: brain-map-asks-first
+expected_outcome: |
+  The reply asks the student to name connections between DEMO101 topics from memory, and which topic
+  is the centre, before any map is shown. It does not reveal how the topics connect, and no canvas
+  file is written yet.
+context:
+  scaffold_script: place-files.sh

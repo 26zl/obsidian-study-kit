@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: vault-adopt-moves-nothing
+expected_outcome: |
+  The agent looks at the student's existing vault, proposes a folder map that uses their own folders
+  (Uni for courses, Daily for daily notes, Inbox for the inbox, Templates for templates) and asks the
+  student to confirm it. No existing note is moved, renamed, deleted or rewritten, and nothing new is
+  written before the student agrees.
+context:
+  scaffold_script: place-files.sh

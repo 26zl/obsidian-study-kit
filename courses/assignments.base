@@ -1,0 +1,53 @@
+filters:
+  and:
+    - 'note.type == "assignment"'
+    - not:
+        - 'file.inFolder("templates")'
+
+formulas:
+  days_left: 'if(due, (date(due) - today()).days, "")'
+
+properties:
+  note.course:
+    displayName: "Course"
+  note.due:
+    displayName: "Due"
+  note.weight:
+    displayName: "Weight"
+  note.status:
+    displayName: "Status"
+  note.ai_policy:
+    displayName: "AI policy"
+  formula.days_left:
+    displayName: "Days left"
+
+views:
+  - type: table
+    name: "Open"
+    filters:
+      and:
+        - 'status != "submitted"'
+        - 'status != "graded"'
+    order:
+      - file.name
+      - course
+      - due
+      - formula.days_left
+      - weight
+      - ai_policy
+      - status
+    sort:
+      - property: due
+        direction: ASC
+  - type: table
+    name: "All"
+    order:
+      - file.name
+      - course
+      - due
+      - weight
+      - status
+      - ai_policy
+    sort:
+      - property: due
+        direction: DESC

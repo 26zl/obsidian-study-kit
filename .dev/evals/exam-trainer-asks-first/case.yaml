@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: exam-trainer-asks-first
+expected_outcome: |
+  The reply sets exactly one exam-style question from the DEMO101 material, states the conditions,
+  and gives no answer, hint or marking points. The marking points are written to a progress log
+  before the question is asked.
+context:
+  scaffold_script: place-files.sh

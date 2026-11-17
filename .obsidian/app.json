@@ -1,0 +1,11 @@
+{
+  "newFileLocation": "folder",
+  "newFileFolderPath": "inbox",
+  "attachmentFolderPath": "attachments",
+  "alwaysUpdateLinks": true,
+  "trashOption": "local",
+  "userIgnoreFilters": [
+    "templates/"
+  ],
+  "showInlineTitle": false
+}

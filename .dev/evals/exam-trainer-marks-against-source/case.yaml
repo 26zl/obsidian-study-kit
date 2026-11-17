@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: exam-trainer-marks-against-source
+expected_outcome: |
+  The answer is marked against the course source. The marking catches that the student has the
+  five-minute result backwards, quotes the student's words, cites the source, gives a score below 3,
+  asks for a rewrite of the weakest part, and saves the attempt and the next review date.
+context:
+  scaffold_script: place-files.sh

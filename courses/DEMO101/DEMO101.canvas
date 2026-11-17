@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"home","type":"file","file":"courses/DEMO101/DEMO101.md","x":-130,"y":-40,"width":260,"height":80,"color":"3"},
+		{"id":"source","type":"file","file":"courses/DEMO101/sources/how-learning-works.md","x":-430,"y":-300,"width":260,"height":80},
+		{"id":"question-bank","type":"file","file":"courses/DEMO101/exam/question-bank.md","x":170,"y":-300,"width":260,"height":80,"color":"2"},
+		{"id":"retrieval","type":"file","file":"courses/DEMO101/topics/retrieval-practice.md","x":-560,"y":200,"width":260,"height":80,"color":"6"},
+		{"id":"spacing","type":"file","file":"courses/DEMO101/topics/spacing.md","x":300,"y":200,"width":260,"height":80,"color":"6"},
+		{"id":"interleaving","type":"file","file":"courses/DEMO101/topics/interleaving.md","x":-130,"y":400,"width":260,"height":80,"color":"6"},
+		{"id":"difficulties","type":"file","file":"courses/DEMO101/sources/how-learning-works.md","subpath":"#Desirable difficulties","x":-130,"y":660,"width":260,"height":120},
+		{"id":"feeling","type":"text","text":"**The feeling of knowing misleads**\nLearners rate rereading and blocked practice as better, and remember less.","x":-820,"y":420,"width":320,"height":120},
+		{"id":"gaps","type":"text","text":"**Gaps**\nDesirable difficulties has no topic note yet. Write one in your own words to close the gap.","x":220,"y":660,"width":300,"height":120,"color":"1"},
+		{"id":"legend","type":"text","text":"**Demo map**\nDrawn from the course reading, so every link is purple. In your own maps, links you name yourself are green.\n\nSay *brain map DEMO101* to draw yours.","x":520,"y":-360,"width":320,"height":220}
+	],
+	"edges":[
+		{"id":"source-home","fromNode":"source","fromSide":"bottom","toNode":"home","toSide":"left","label":"the course reading"},
+		{"id":"questions-home","fromNode":"question-bank","fromSide":"bottom","toNode":"home","toSide":"right","label":"practice questions"},
+		{"id":"home-retrieval","fromNode":"home","fromSide":"left","toNode":"retrieval","toSide":"top"},
+		{"id":"home-spacing","fromNode":"home","fromSide":"right","toNode":"spacing","toSide":"top"},
+		{"id":"home-interleaving","fromNode":"home","fromSide":"bottom","toNode":"interleaving","toSide":"top"},
+		{"id":"retrieval-spacing","fromNode":"retrieval","fromSide":"right","toNode":"spacing","toSide":"left","toEnd":"none","color":"6","label":"recall again after a growing gap"},
+		{"id":"retrieval-difficulties","fromNode":"retrieval","fromSide":"bottom","toNode":"difficulties","toSide":"left","color":"6","label":"a desirable difficulty"},
+		{"id":"spacing-difficulties","fromNode":"spacing","fromSide":"bottom","toNode":"difficulties","toSide":"right","color":"6","label":"a desirable difficulty"},
+		{"id":"interleaving-difficulties","fromNode":"interleaving","fromSide":"bottom","toNode":"difficulties","toSide":"top","color":"6","label":"a desirable difficulty"},
+		{"id":"retrieval-feeling","fromNode":"retrieval","fromSide":"left","toNode":"feeling","toSide":"top","color":"6","label":"rereading feels better"},
+		{"id":"interleaving-feeling","fromNode":"interleaving","fromSide":"left","toNode":"feeling","toSide":"right","color":"6","label":"blocked practice feels better"}
+	]
+}

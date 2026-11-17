@@ -1,0 +1,51 @@
+filters:
+  and:
+    - 'note.type == "course"'
+    - not:
+        - 'file.inFolder("templates")'
+
+formulas:
+  days_to_exam: 'if(exam_date, (date(exam_date) - today()).days, "")'
+
+properties:
+  note.code:
+    displayName: "Code"
+  note.title:
+    displayName: "Course"
+  note.term:
+    displayName: "Term"
+  note.exam_date:
+    displayName: "Exam"
+  note.exam_form:
+    displayName: "Form"
+  note.status:
+    displayName: "Status"
+  formula.days_to_exam:
+    displayName: "Days left"
+
+views:
+  - type: table
+    name: "Active"
+    filters:
+      and:
+        - 'status == "active"'
+    order:
+      - file.name
+      - title
+      - exam_date
+      - formula.days_to_exam
+      - exam_form
+    sort:
+      - property: exam_date
+        direction: ASC
+  - type: table
+    name: "All"
+    order:
+      - file.name
+      - title
+      - term
+      - exam_date
+      - status
+    sort:
+      - property: term
+        direction: DESC
